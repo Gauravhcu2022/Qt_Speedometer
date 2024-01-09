@@ -12,18 +12,18 @@
     ----Prerequisites<br>
     ----Installation<br>
     Usage<br>
-    Configuration<br>
-    License
+    Configuration
+ 
 </p>
 <h3>Introduction</h3>
 
 <p>The Speedometer Application is a Qt Quick project that provides a graphical representation of a speedometer. It includes features such as a needle indicating speed, left and right indicators with blinking functionality, accelerator and brake buttons, and the capability to reduce speed automatically.</p>
 <h3>Features </h3>
 <p>
-  Speedometer with a dynamic needle indicating speed.<br>
-    Left and right indicators with blinking functionality.<br>
-    Accelerator and brake buttons to control the speed.<br>
-    Auto speed reduction by 0.5 km/h per second when the accelerator button is released.</p>
+ -- Speedometer with a dynamic needle indicating speed.<br>
+ --   Left and right indicators with blinking functionality.<br>
+ --   Accelerator and brake buttons to control the speed.<br>
+ --   Auto speed reduction by 0.5 km/h per second when the accelerator button is released.</p>
     
     
 
@@ -36,30 +36,28 @@
 
 <h4>Installation</h4>
 
-    <p>Clone the repository.<br>
+   <p>Clone the repository:</p>
     
+    git clone https://github.com/Gauravhcu2022/Qt_Speedometer.git
 
-    git clone 
+   <p>Open the project in Qt Creator.</p>
 
-    Open the project in Qt Creator.
+   <p> Build and run the application.</p>
 
-    Build and run the application.<p>
+<h3>Usage</h3>
 
-Usage
+  <p>  Once the application is running, you can interact with the speedometer using the following controls:</p>
 
-Once the application is running, you can interact with the speedometer using the following controls:
+   <p> <u>Brake Button:</u> Click or press the "Brake" button to apply brakes and decrease speed. If you don't want to use brake button it will automatically decreases speed through auto-reduction. </p>
 
-    Brake Button: Click the "Brake" button to apply brakes and decrease speed.
+   <p><u> Accelerator Button:</u> Click or press the "Accelerator" button to increase speed. Release the button to start auto speed reduction.</p>
 
-    Accelerator Button: Click the "Accelerator" button to increase speed. Release the button to start auto speed reduction.
+   <p><u> Left Indicator Button:</u> Click the "Left Indicator" button to activate the left indicator arrow it will first pause the right indicator if applied. Click the "Off Indicator" button to turn it off.</p>
 
-    Left Indicator Button: Click the "Left Indicator" button to activate the left indicator arrow. Click the "Off Indicator" button to turn it off.
+   <p> <u>Right Indicator Button:</u> Click the "Right Indicator" button to activate the right indicator arrow it will first pause the left indicator if applied. Click the "Off Indicator" button to turn it off.</p>
+   <p><u>Off Indicator Button:</u> Click the "Off Indicator" button to off the indicator whenever you don't want indicator.</p>
 
-    Right Indicator Button: Click the "Right Indicator" button to activate the right indicator arrow. Click the "Off Indicator" button to turn it off.
+<h3>Configuration</h3>
 
-Configuration
+<p>There are no additional configuration options for this application.</p>
 
-There are no additional configuration options for this application.
-License
-
-This project is licensed under the MIT License. If you use third-party libraries or assets, refer to their respective licenses.
