@@ -1,7 +1,9 @@
 <h1>Speedometer Application</h1>
 
 <p>This Qt Quick application simulates a speedometer with left and right indicators, accelerator and brake buttons, and additional features.</p>
-<img src="https://github.com/Gauravhcu2022/Qt_Speedometer/assets/140634022/37bc1057-55e9-4a59-9b36-71b6f9554d6b" height ="800" width ="1000">
+
+<img src="https://github.com/Gauravhcu2022/Qt_Speedometer/assets/140634022/c9b8b0a8-5b7d-4cf4-8496-a7491d6cea22" height ="800" width ="1000">
+
 
 
 <h3>Table of Contents</h3>
