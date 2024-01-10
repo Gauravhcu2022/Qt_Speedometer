@@ -41,24 +41,54 @@
 
    <p>Clone the repository:</p>
     
-    git clone https://github.com/Gauravhcu2022/Qt_Speedometer.git
+    git clone https://github.com/Gauravhcu2022/Speedometer.git
 
    <p>Open the project in Qt Creator.</p>
 
-   <p> Build and run the application.</p>
+   <p> Build and run the application.(May be image of speedometer not displayed so follow below steps)</p>
+   <p>It will give error:</p>
+   <p>qrc:/qt/qml/Main/main.qml:16:5: QML QQuickImage: Cannot open: qrc:/qt/qml/Main/speedometer_background.png</p>
+   <p>Means you have to add all other files in qrc file, Here having steps how to do that:</p>
+   <p>Go to left side of Qt Creator and in edit you saw project files go through <b> SpeedometerApp[main]/SpeedometerApp/Build_Directory/.rcc </b> </p>
+       <p>Then you saw <b>SpeedometerApp_raw_qml_0.qrc </b> folder press right click and open with Plain Text Editor and remove all and paste this:</p>
+      
+<pre>
+&lt;RCC&gt;
+  &lt;qresource prefix="/qt/qml/Main/"&gt;
+    &lt;file alias="main.qml"&gt;/home/gaurav/Speedometer/main.qml&lt;/file&gt;
+  &lt;/qresource&gt;
+  &lt;qresource prefix="/qt/qml/Main/"&gt;
+    &lt;file alias="speedometer_background.png"&gt;/home/gaurav/Speedometer/speedometer_background.png&lt;/file&gt;
+  &lt;/qresource&gt;
+  &lt;qresource prefix="/qt/qml/Main/"&gt;
+    &lt;file alias="accerator.mp3"&gt;/home/gaurav/Speedometer/accerator.mp3&lt;/file&gt;
+  &lt;/qresource&gt;
+  &lt;qresource prefix="/qt/qml/Main/"&gt;
+    &lt;file alias="brake.mp3"&gt;/home/gaurav/Speedometer/brake.mp3&lt;/file&gt;
+  &lt;/qresource&gt;
+  &lt;qresource prefix="/qt/qml/Main/"&gt;
+    &lt;file alias="indicator.mp3"&gt;/home/gaurav/Speedometer/indicator.mp3&lt;/file&gt;
+  &lt;/qresource&gt;
+  &lt;qresource prefix="/qt/qml/Main/"&gt;
+    &lt;file alias="running.mp3"&gt;/home/gaurav/Speedometer/running.mp3&lt;/file&gt;
+  &lt;/qresource&gt;
+&lt;/RCC&gt;
+</pre>
+
+      
 
 <h3>Usage</h3>
 
   <p>  Once the application is running, you can interact with the speedometer using the following controls:</p>
 
-   <p> <u>Brake Button:</u> Click or press the "Brake" button to apply brakes and decrease speed. If you don't want to use brake button it will automatically decreases speed through auto-reduction. </p>
+   <p> <b>Brake Button:</b> Click or press the "Brake" button to apply brakes and decrease speed. If you don't want to use brake button it will automatically decreases speed through auto-reduction. </p>
 
-   <p><u> Accelerator Button:</u> Click or press the "Accelerator" button to increase speed. Release the button to start auto speed reduction.</p>
+   <p><b> Accelerator Button:</b> Click or press the "Accelerator" button to increase speed. Release the button to start auto speed reduction.</p>
 
-   <p><u> Left Indicator Button:</u> Click the "Left Indicator" button to activate the left indicator arrow it will first pause the right indicator if applied. Click the "Off Indicator" button to turn it off.</p>
+   <p><b> Left Indicator Button:</b> Click the "Left Indicator" button to activate the left indicator arrow it will first pause the right indicator if applied. Click the "Off Indicator" button to turn it off.</p>
 
-   <p> <u>Right Indicator Button:</u> Click the "Right Indicator" button to activate the right indicator arrow it will first pause the left indicator if applied. Click the "Off Indicator" button to turn it off.</p>
-   <p><u>Off Indicator Button:</u> Click the "Off Indicator" button to off the indicator whenever you don't want indicator.</p>
+   <p> <b>Right Indicator Button:</b> Click the "Right Indicator" button to activate the right indicator arrow it will first pause the left indicator if applied. Click the "Off Indicator" button to turn it off.</p>
+   <p><b>Off Indicator Button:</b> Click the "Off Indicator" button to off the indicator whenever you don't want indicator.</p>
 
 <h3>Configuration</h3>
 
