@@ -94,4 +94,4 @@
 
 <p>There are no additional configuration options for this application.</p>
 <h3>Future Changes</h3>
-<p>I have to add multimedia to make speedometer more interactive thats why i already paste audio for running, brake, accerator and indicator but right now, I don't have license to use multimedia property properly. </p>
+<p>I have to add multimedia to make speedometer more interactive thats why I already paste audio for running, brake, accerator and indicator but right now, I don't have license to use multimedia property properly. </p>
