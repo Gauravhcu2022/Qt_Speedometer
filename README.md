@@ -1,4 +1,4 @@
-<h1>Speedometer Application</h1>
+<body><h1>Speedometer Application</h1>
 
 <p>This Qt Quick application simulates a speedometer with left and right indicators, accelerator and brake buttons, and additional features.</p>
 
@@ -7,17 +7,42 @@
 
 
 <h3>Table of Contents</h3>
-<p>
-    Introduction<br>
-    Features<br>
-    Getting Started<br>
-    ----Prerequisites<br>
-    ----Installation<br>
-    Usage<br>
-    Configuration<br>
-    Future Changes
- 
-</p>
+<ol>
+    <li>Introduction</li>
+    <li>Features</li>
+    <li>Getting Started
+        <ul>
+            <li>Prerequisites</li>
+            <li>Installation</li>
+        </ul>
+    </li>
+    <li>Implementation
+        <ul>
+            <li>SpeedometerController
+                <ul>
+                    <li>Properties</li>
+                    <li>Methods</li>
+                    <li>Signals</li>
+                </ul>
+            </li>
+            <li>main.qml
+                <ul>
+                    <li>Key Components</li>
+                    <li>Timers</li>
+                </ul>
+            </li>
+            <li>main.cpp
+                <ul>
+                    <li>Key Components</li>
+                </ul>
+            </li>
+            <li>Additional Files</li>
+        </ul>
+    </li>
+    <li>Usage</li>
+    <li>Configuration</li>
+    <li>Future Enhancements</li>
+</ol>
 <h3>Introduction</h3>
 
 <p>The Speedometer Application is a Qt Quick project that provides a graphical representation of a speedometer. It includes features such as a needle indicating speed, left and right indicators with blinking functionality, accelerator and brake buttons, and the capability to reduce speed automatically.</p>
@@ -74,8 +99,41 @@
   &lt;/qresource&gt;
 &lt;/RCC&gt;
 </pre>
-
-      
+<h3>Implementation</h3>
+ <p>The Speedometer Application is implemented as a Qt Quick project with a focus on providing an interactive and visually appealing representation of a speedometer. The application is structured into several key components that work together to create a seamless user experience.
+</p>     
+<h4>SpeedometerController</h4>
+  <p>The `SpeedometerController` class serves as the core logic behind managing and updating the speed displayed on the speedometer. It is a QObject derived class, providing properties, signals, and slots for effective communication between C++ and QML.</p> 
+    <h5>Properties</h5>
+    <p><b>displayedValue (int):</b> Represents the current speed displayed on the speedometer.</p>
+    <h5>Methods</h5>
+    <p><b>accelerate()</b>: Increases the displayed speed by 2 units, or 1 unit if the speed is at 99.<br>
+<b>brake()</b>: Decreases the displayed speed by 2 units, or 1 unit if the speed is at 1.<br>
+<b>reduceSpeed()</b>: Initiates an automatic reduction of speed by 0.5 units per second when called.
+</p>
+<h5>Signals</h5>
+<p><b>displayedValueChanged():</b> Emitted whenever the displayed speed changes.</p>
+<h4>main.qml</h4>
+<p>The `main.qml` file defines the main user interface for the Speedometer Application. It leverages QML's declarative syntax to create a visually appealing and dynamic representation of the speedometer.</p>
+<h5>Key Components</h5>
+<p><b>Needle:</b> A visual representation of the speed, dynamically adjusting its rotation based on the displayed speed value.<br>
+<b>Left and Right Indicators:</b> Blinking arrows indicating the turning directions.<br>
+<b>Brake and Accelerator Buttons:</b> User interface elements for controlling the speed interactively.<br>
+<b>Indicator Buttons:</b> Buttons to activate left, right, or turn off the indicators.
+</p>
+<h5>Timers</h5>
+<p><b>Blink Timers:</b> Control the blinking animation of the left and right indicators, enhancing visual feedback.
+<br><b>Auto Reduce Speed Timer:</b> Automatically reduces the speed when the accelerator button is released, providing a realistic driving experience.
+</p>
+<h4>main.cpp</h4>
+<p>The `main.cpp` file acts as the entry point for the application and orchestrates the integration between C++ and QML.
+</p>
+<h5>Key Components</h5>
+<p><b>SpeedometerController Instance:</b> An instance of the `SpeedometerController` class is created and set as a context property, enabling seamless communication between C++ and QML.
+</p>
+<h4>Additional Files</h4>
+<p><b>SpeedometerController.h and SpeedometerController.cpp:</b> Implement the core logic for the `SpeedometerController` class, encapsulating the speed management functionality.<br>
+<b>app_environment.h, import_qml_components_plugins.h, and import_qml_plugins.h:</b> Handle application environment setup and import necessary QML components and plugins.</p>
 
 <h3>Usage</h3>
 
@@ -91,7 +149,8 @@
    <p><b>Off Indicator Button:</b> Click the "Off Indicator" button to off the indicator whenever you don't want indicator.</p>
 
 <h3>Configuration</h3>
-
 <p>There are no additional configuration options for this application.</p>
-<h3>Future Changes</h3>
-<p>I have to add multimedia to make speedometer more interactive thats why I already paste audio for running, brake, accerator and indicator but right now, I don't have license to use multimedia property properly. </p>
+<h3>Future Enhancements</h3>
+<p>As part of future enhancements, multimedia elements such as audio feedback for acceleration, braking, and indicator activation are planned to make the speedometer more immersive. Due to licensing constraints, these features are currently pending implementation.
+ </p>
+</body>
